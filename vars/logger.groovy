@@ -14,8 +14,8 @@ def call(global_level, level, message) {
 		emit = true
 
 	default:
-		if(emit) {echo "${level}: ${message}"}
+		emit = true
 	}
-	
+	if(emit) {echo "${level}: ${message}"}
 
 }
