@@ -1,7 +1,21 @@
-def info(message) {
-    echo "INFO: ${message}"
-}
+def console(global_level, level, message) {
+	def emit = false
+	switch(global_level) {
+	case "DEBUG":
+		emit = true
+	case "INFO":
+		if(level == "INFO")
+		emit = true
+	case "WARNING"
+		if(level == "WARNING")
+		emit = true
+	case "ERROR"
+		if(level == "ERROR")
+		emit = true
 
-def warning(message) {
-    echo "WARNING: ${message}"
+	default:
+		if(emit) {echo "${level}: ${message}"}
+	}
+	
+	echo ${loglevel}
 }
