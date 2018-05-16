@@ -1,4 +1,4 @@
-def console(global_level, level, message) {
+def call(global_level, level, message) {
 	def emit = false
 	switch(global_level) {
 	case "DEBUG":
