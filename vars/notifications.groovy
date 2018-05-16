@@ -1,6 +1,8 @@
-def call(args) {
-	echo "Notifications called"
-	echo "Check Slack"
-	echo "Send Slack ${args}"
-	echo "Exit Notifications"
+def call(channel, args) {
+	if (channel == "CONSOLE") {
+		echo "${args}"
+	}
+	if (channel == "SLACK") {
+		echo "Call slack method ${args}"
+	}
 }
