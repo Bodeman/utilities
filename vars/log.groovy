@@ -17,5 +17,5 @@ def call(global_level, level, message) {
 		if(emit) {echo "${level}: ${message}"}
 	}
 	
-	echo ${loglevel}
+
 }
