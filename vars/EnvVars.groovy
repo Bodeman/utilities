@@ -1,4 +1,4 @@
-def LoadWorkingGitURL(mode) {
+def call(mode) {
 	try{
 	if(mode == 0) {
 		env.workingGitURL = "CAMMIS"
