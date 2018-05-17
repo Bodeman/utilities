@@ -1,10 +1,10 @@
 def LoadWorkingGitURL(mode) {
 	try{
 	if(mode == 0) {
-		return "Cammis"
+		env.workingGitURL = "CAMMIS"
 	}
 	else {
-		return 'https://github.com/Bodeman/Dev.git'  
+		env.workingGitURL = 'https://github.com/Bodeman/Dev.git'  
 	}
 	}
 	catch (e) {
