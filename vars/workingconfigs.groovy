@@ -30,7 +30,7 @@ def setPOM(mode) {
 			return '/var/lib/jenkins/workspace/TestPipeline/SpringPOC'
 		}
 		else {
-			return '/var/lib/jenkins/workspace/TestPipeline/SpringPOC'  
+			return '${env.WORKSPACE}\TestPipeline\SpringPOC'  
 		}
 	}
 	catch (e) {
