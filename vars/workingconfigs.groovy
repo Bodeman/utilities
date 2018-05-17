@@ -1,7 +1,7 @@
 def seturl(mode) {
 	try{
 		if(mode == 0) {
-			return "CAMMIS"
+			return 'CAMMIS'
 		}
 		else {
 			return 'https://github.com/Bodeman/Dev.git'  
