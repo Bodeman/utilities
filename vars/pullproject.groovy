@@ -1,4 +1,4 @@
-def call(workingGitURL, workingBranch) {
+def call(workingGitURL, workingBranch, continueBuild) {
 	try {
 		logger "${loglevel}", "DEBUG", "Attempting git pull ${workingGitURL}, branch: ${workingBranch}"
 		git url: "${workingGitURL}", branch: "${workingBranch}"
