@@ -1,4 +1,5 @@
 def call(global_level, level, message) {
+	try {
 	def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
@@ -15,5 +16,8 @@ def call(global_level, level, message) {
 	if(global_level == "ERROR" && level == "ERROR") {emit = true}
 
 	if(emit) {echo "${level}: ${message}"}
-
+	}
+	catch (e) {
+		echo "Logger Error: ${e}"
+	}
 }
