@@ -1,7 +1,7 @@
 def call(mode, SonarHost) {
 	try {
 		if(mode == 'Windows') {
-			bat 'mavn sonar:sonar' +
+			bat 'mvn sonar:sonar' +
 					' -Dsonar.host.url=${SonarHost}' + 
 					' -Dsonar.projectVersion=1.0' +
 					' -Dsonar.sourceEncoding=UTF-8' +
