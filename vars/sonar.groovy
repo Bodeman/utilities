@@ -1,7 +1,7 @@
-def call(mode, SonarHost) {
+def call(mode, SonarHost, workingProject, workingJenkinsDir, workingJob) {
 	try {
 		if(mode == 'Windows') {
-			bat "mvn sonar:sonar -Dsonar.host.url=${SonarHost}'"		
+			bat "mvn sonar:sonar -Dsonar.host.url=${SonarHost}' -Dsonar.projectBaseDir='${workingJenkinsDir}'/'${workingJob}"		
 			}
 		else {
 			sh '/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/Sonar/bin/sonar-scanner' +
