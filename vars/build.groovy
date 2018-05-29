@@ -1,4 +1,7 @@
 def call(mode, mvnHome, POMLocation, disable, loglevel) {
+	def add_debug = ""
+	def remove_info = ""
+
 	if (loglevel == "DEBUG") {
 		add_debug = "-X"
 	}
