@@ -1,4 +1,4 @@
-def call(mode, mvnHome, POMLocation, disable) {
+def call(mode, mvnHome, POMLocation, disable, loglevel) {
 	if (loglevel == "DEBUG") {
 		add_debug = "-X"
 	}
