@@ -7,6 +7,7 @@ def call(mode, mvnHome, POMLocation, disable) {
 				sh "'${mvnHome}/bin/mvn' -X -B --file '${POMLocation}' -Dmaven.test.failure.ignore clean install cobertura:cobertura -Dcobertura.report.format=xml"
 			}
 		}
+		else {echo "Skipping compile: ${disable}"}
 	}
 	catch (e) { echo "ERROR: ${e}"}
 }
