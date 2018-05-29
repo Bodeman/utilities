@@ -1,6 +1,6 @@
 def call(mode, mvnHome, POMLocation, disable) {
 	try {
-		if(disable != "TRUE") {
+		if(disable != true) {
 			if(mode == "Windows") {
 				bat "mvn -X -B --file ${POMLocation} -Dmaven.test.failure.ignore clean install cobertura:cobertura -Dcobertura.report.format=xml"
 			} else {
