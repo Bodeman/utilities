@@ -1,6 +1,7 @@
 def call(mode, SonarHost, workingProject, workingJenkinsDir, workingJob) {
 	try {
 		if(mode == 'Windows') {
+			bat "cd ${workingJenkinsDir}\\${workingProject}"
 			bat "mvn sonar:sonar -Dsonar.host.url=${SonarHost}' -Dsonar.projectBaseDir='${workingJenkinsDir}\\${workingProject}\\'  -Dsonar.sources='${workingJenkinsDir}\\${workingProject}\\src'"		
 			}
 		else {
